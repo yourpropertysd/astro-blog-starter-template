@@ -13,38 +13,322 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<body>
 		<Header />
 		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+			<article class="listing">
+				<section class="hero">
+					<div class="hero__content">
+						<p class="badge">For Sale By Owner</p>
+						<h1 class="title">8020 Linda Vista Rd, Unit 1C</h1>
+						<p class="subtitle">San Diego, CA 92111</p>
+						<p class="price">Price: <span class="muted">$[your price here]</span></p>
+						<div class="contactCard" aria-label="Contact information">
+							<h2 class="contactTitle">Contact</h2>
+							<ul class="contactList">
+								<li><strong>Name:</strong> [Your Name]</li>
+								<li><strong>Phone:</strong> [Your Phone]</li>
+								<li><strong>Email:</strong> <a href="mailto:[your@email.com]">[your@email.com]</a></li>
+							</ul>
+							<p class="contactNote">Text or email for a showing, questions, or disclosures.</p>
+						</div>
+					</div>
+				</section>
+
+				<section class="section" aria-label="Highlights">
+					<h2>Highlights</h2>
+					<ul class="highlights">
+						<li>Two primary suites with large bedrooms</li>
+						<li>Fully renovated bathrooms</li>
+						<li>All new appliances plus butcher block countertops</li>
+						<li>New LVP flooring throughout</li>
+						<li>New dual pane vinyl windows and new patio door</li>
+						<li>Ground level access plus two reserved parking spots right in front</li>
+						<li>Large wrap around exterior backyard, ready for pets, a garden, or an expanded patio</li>
+						<li>Tranquil, well planted courtyard vibe with great airflow</li>
+					</ul>
+				</section>
+
+				<section class="section" aria-label="Property details">
+					<h2>Property details</h2>
+					<div class="detailsGrid">
+						<div class="detail"><span class="k">Bedrooms</span><span class="v">[ ]</span></div>
+						<div class="detail"><span class="k">Bathrooms</span><span class="v">[ ]</span></div>
+						<div class="detail"><span class="k">Living area</span><span class="v">[ ] sq ft</span></div>
+						<div class="detail"><span class="k">Parking</span><span class="v">Two reserved spots</span></div>
+						<div class="detail"><span class="k">Level</span><span class="v">Ground level</span></div>
+						<div class="detail"><span class="k">HOA</span><span class="v">$[ ] per month</span></div>
+					</div>
+					<p class="muted small">Fill in any blanks above with your exact numbers. Keep it boring and accurate. Buyers love boring and accurate.</p>
+				</section>
+
+				<section class="section" aria-label="Description">
+					<h2>About this home</h2>
+					<p>
+						This updated, ground level condo delivers the rare combo of two true primary suites and a surprisingly large outdoor footprint.
+						Inside, you get new LVP flooring, ceiling fans throughout, new appliances, and renovated bathrooms.
+						Outside, the wrap around backyard space opens up real options: a proper garden, room for pets, or an extended patio setup.
+						The courtyard is lush and calm, and your two reserved parking spots sit directly in front of the building for easy daily life.
+					</p>
+					<p>
+						If you have been hunting for something that feels move in ready but still gives you outdoor breathing room, this is the one.
+					</p>
+				</section>
+
+				<section class="section" aria-label="Features">
+					<h2>Features</h2>
+					<div class="featureGrid">
+						<div class="feature">
+							<h3>Interior upgrades</h3>
+							<ul>
+								<li>Two primary suites with large bedrooms</li>
+								<li>Ceiling fans throughout</li>
+								<li>New LVP flooring</li>
+								<li>New appliances</li>
+								<li>New butcher block countertops</li>
+								<li>Newly renovated bathrooms</li>
+							</ul>
+						</div>
+						<div class="feature">
+							<h3>Windows and access</h3>
+							<ul>
+								<li>New dual pane vinyl windows</li>
+								<li>New vinyl patio door</li>
+								<li>Ground level for easy access</li>
+							</ul>
+						</div>
+						<div class="feature">
+							<h3>Outdoor space</h3>
+							<ul>
+								<li>Large wrap around backyard space</li>
+								<li>Room for a garden, pets, and outdoor dining</li>
+								<li>Well planted tranquil courtyard feel</li>
+							</ul>
+						</div>
+						<div class="feature">
+							<h3>Parking and location</h3>
+							<ul>
+								<li>Two reserved parking spots directly in front</li>
+								<li>Close to shopping, dining, and major routes</li>
+								<li>Great schools in the district</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<section class="section" aria-label="Photo gallery">
+					<h2>Photos</h2>
+					<p class="muted">Replace the placeholders below with your actual photos. Keep them bright, level, and honest.</p>
+					<div class="gallery">
+						<div class="photoPlaceholder">[Front exterior and courtyard photo]</div>
+						<div class="photoPlaceholder">[Living room photo]</div>
+						<div class="photoPlaceholder">[Kitchen photo]</div>
+						<div class="photoPlaceholder">[Primary suite 1 photo]</div>
+						<div class="photoPlaceholder">[Primary suite 2 photo]</div>
+						<div class="photoPlaceholder">[Bathroom photo]</div>
+						<div class="photoPlaceholder">[Wrap around backyard photo]</div>
+						<div class="photoPlaceholder">[Parking spots photo]</div>
+					</div>
+				</section>
+
+				<section class="section" aria-label="Showing and offers">
+					<h2>Showings and offers</h2>
+					<ul>
+						<li>Showings by appointment</li>
+						<li>Proof of funds or lender pre approval requested for private showings</li>
+						<li>Agents welcome, bring your buyer</li>
+					</ul>
+					<p class="muted small">Adjust this section to match how you want to run the process.</p>
+				</section>
+
+				<section class="section contactBottom" aria-label="Contact information at bottom">
+					<h2>Contact</h2>
+					<p class="muted">Reach out for a showing, disclosures, or any questions.</p>
+					<div class="contactRow">
+						<div><strong>Name:</strong> [Your Name]</div>
+						<div><strong>Phone:</strong> [Your Phone]</div>
+						<div><strong>Email:</strong> <a href="mailto:[your@email.com]">[your@email.com]</a></div>
+					</div>
+				</section>
+			</article>
 		</main>
 		<Footer />
+		<style>
+			:global(body) {
+				color: #0f172a;
+				background: #ffffff;
+			}
+
+			.listing {
+				max-width: 980px;
+				margin: 0 auto;
+				padding: 2.5rem 1.25rem 4rem;
+			}
+
+			.hero {
+				padding: 1.75rem;
+				border: 1px solid rgba(15, 23, 42, 0.12);
+				border-radius: 18px;
+				background: rgba(15, 23, 42, 0.03);
+			}
+
+			.badge {
+				display: inline-block;
+				font-size: 0.9rem;
+				font-weight: 700;
+				letter-spacing: 0.02em;
+				padding: 0.35rem 0.65rem;
+				border-radius: 999px;
+				border: 1px solid rgba(15, 23, 42, 0.18);
+				background: #ffffff;
+				margin: 0 0 0.75rem;
+			}
+
+			.title {
+				font-size: clamp(1.8rem, 3vw, 2.6rem);
+				margin: 0;
+			}
+
+			.subtitle {
+				font-size: 1.1rem;
+				margin: 0.35rem 0 0;
+				color: rgba(15, 23, 42, 0.75);
+			}
+
+			.price {
+				margin: 0.8rem 0 0;
+				font-size: 1.05rem;
+			}
+
+			.section {
+				margin-top: 2.25rem;
+			}
+
+			.section h2 {
+				font-size: 1.35rem;
+				margin: 0 0 0.85rem;
+			}
+
+			.section h3 {
+				font-size: 1.05rem;
+				margin: 0 0 0.6rem;
+			}
+
+			.muted {
+				color: rgba(15, 23, 42, 0.7);
+			}
+
+			.small {
+				font-size: 0.95rem;
+			}
+
+			.highlights {
+				display: grid;
+				gap: 0.6rem 1.1rem;
+				grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+				padding-left: 1.2rem;
+				margin: 0;
+			}
+
+			.detailsGrid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+				gap: 0.75rem;
+			}
+
+			.detail {
+				border: 1px solid rgba(15, 23, 42, 0.12);
+				border-radius: 14px;
+				padding: 0.85rem 0.95rem;
+				background: #ffffff;
+				display: flex;
+				justify-content: space-between;
+				gap: 0.75rem;
+			}
+
+			.detail .k {
+				color: rgba(15, 23, 42, 0.7);
+			}
+
+			.detail .v {
+				font-weight: 700;
+			}
+
+			.featureGrid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+				gap: 1rem;
+			}
+
+			.feature {
+				border: 1px solid rgba(15, 23, 42, 0.12);
+				border-radius: 18px;
+				padding: 1rem 1rem 0.85rem;
+				background: #ffffff;
+			}
+
+			.feature ul {
+				margin: 0;
+				padding-left: 1.2rem;
+			}
+
+			.gallery {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+				gap: 0.85rem;
+				margin-top: 0.9rem;
+			}
+
+			.photoPlaceholder {
+				border: 2px dashed rgba(15, 23, 42, 0.25);
+				border-radius: 18px;
+				min-height: 170px;
+				display: grid;
+				place-items: center;
+				padding: 1rem;
+				text-align: center;
+				color: rgba(15, 23, 42, 0.65);
+				background: rgba(15, 23, 42, 0.02);
+			}
+
+			.contactCard {
+				margin-top: 1.1rem;
+				border: 1px solid rgba(15, 23, 42, 0.12);
+				border-radius: 18px;
+				padding: 1rem 1.05rem;
+				background: #ffffff;
+				max-width: 520px;
+			}
+
+			.contactTitle {
+				margin: 0 0 0.6rem;
+				font-size: 1.15rem;
+			}
+
+			.contactList {
+				margin: 0;
+				padding-left: 1.1rem;
+			}
+
+			.contactNote {
+				margin: 0.75rem 0 0;
+				color: rgba(15, 23, 42, 0.7);
+				font-size: 0.95rem;
+			}
+
+			.contactBottom {
+				border-top: 1px solid rgba(15, 23, 42, 0.12);
+				padding-top: 1.5rem;
+			}
+
+			.contactRow {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+				gap: 0.75rem;
+				margin-top: 0.75rem;
+			}
+
+			@media (prefers-reduced-motion: reduce) {
+				* {
+					scroll-behavior: auto;
+				}
+			}
+		</style>
 	</body>
-</html>
