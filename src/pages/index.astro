@@ -1,6 +1,5 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
@@ -8,311 +7,808 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 <!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<BaseHead title={`${SITE_TITLE} - San Diego`} description={SITE_DESCRIPTION} />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Darker+Grotesque:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 	</head>
 	<body>
-		<Header />
-		<main>
-			<article class="listing">
-				<section class="hero">
-					<div class="hero__content">
-						<h1 class="title">8020 Linda Vista Rd, Unit 1C</h1>
-						<p class="subtitle">San Diego, CA 92111</p>
-						<p class="price">Price: <span class="muted">$549,000</span></p>
+		<!-- Hero Section -->
+		<section class="hero">
+			<div class="hero-content">
+				<div class="hero-label">For Sale By Owner</div>
+				<h1>Modern Living,<br />Ground Level</h1>
+				<div class="hero-address">8020 Linda Vista Rd, Unit 1C<br />San Diego, CA 92111</div>
+				<div class="hero-price">$549,000</div>
+				<a href="#contact" class="cta-button">Schedule Showing</a>
+			</div>
+			<div class="scroll-indicator" aria-hidden="true"></div>
+		</section>
+
+		<!-- Photo Gallery Section -->
+		<section class="gallery-section" aria-label="Photo gallery">
+			<h2 class="section-title">Photo Gallery</h2>
+			<p class="section-subtitle">Explore every detail of your future home</p>
+
+			<div class="gallery-grid">
+				<div class="gallery-item large fade-in">
+					<img src="/blog-placeholder-1.jpg" alt="Living Room" width="800" height="450" />
+					<div class="gallery-overlay">
+						<span>Living Room</span>
 					</div>
-				</section>
-
-				<section class="section" aria-label="Photo gallery">
-					<h2>Photos</h2>
-					<div class="gallery">
-						<div class="photoPlaceholder">[Front exterior and courtyard photo]</div>
-						<div class="photoPlaceholder">[Living room photo]</div>
-						<div class="photoPlaceholder">[Kitchen photo]</div>
-						<div class="photoPlaceholder">[Primary suite 1 photo]</div>
-						<div class="photoPlaceholder">[Primary suite 2 photo]</div>
-						<div class="photoPlaceholder">[Bathroom photo]</div>
-						<div class="photoPlaceholder">[Wrap around backyard photo]</div>
-						<div class="photoPlaceholder">[Parking spots photo]</div>
+				</div>
+				<div class="gallery-item fade-in">
+					<img src="/blog-placeholder-2.jpg" alt="Kitchen" width="600" height="600" />
+					<div class="gallery-overlay">
+						<span>Kitchen</span>
 					</div>
-				</section>
-
-				<section class="section" aria-label="Highlights">
-					<h2>Highlights</h2>
-					<ul class="highlights">
-						<li>Two primary suites with large bedrooms</li>
-						<li>Fully renovated bathrooms</li>
-						<li>All new appliances plus butcher block countertops</li>
-						<li>New LVP flooring throughout</li>
-						<li>New dual pane vinyl windows and new patio door</li>
-						<li>Ground level access plus two reserved parking spots right in front</li>
-						<li>Large wrap around exterior backyard, ready for pets, a garden, or an expanded patio</li>
-						<li>Tranquil, well planted courtyard vibe with great airflow</li>
-					</ul>
-				</section>
-
-				<section class="section" aria-label="Property details">
-					<h2>Property details</h2>
-					<div class="detailsGrid">
-						<div class="detail"><span class="k">Bedrooms</span><span class="v">2</span></div>
-						<div class="detail"><span class="k">Bathrooms</span><span class="v">2</span></div>
-						<div class="detail"><span class="k">Living area</span><span class="v">949 sq ft</span></div>
-						<div class="detail"><span class="k">Parking</span><span class="v">Two reserved spots</span></div>
-						<div class="detail"><span class="k">Level</span><span class="v">Ground level</span></div>
-						<div class="detail"><span class="k">HOA</span><span class="v">$410 per month</span></div>
+				</div>
+				<div class="gallery-item fade-in">
+					<img src="/blog-placeholder-3.jpg" alt="Primary Suite 1" width="600" height="600" />
+					<div class="gallery-overlay">
+						<span>Primary Suite 1</span>
 					</div>
-				</section>
-
-				<section class="section" aria-label="Description">
-					<h2>About this home</h2>
-					<p>
-						This updated, ground level condo delivers the rare combo of two true primary suites and a surprisingly large outdoor footprint.
-						Inside, you get new LVP flooring, ceiling fans throughout, new appliances, and renovated bathrooms.
-						Outside, the wrap around backyard space opens up real options: a proper garden, room for pets, or an extended patio setup.
-						The courtyard is lush and calm, and your two reserved parking spots sit directly in front of the building for easy daily life.
-					</p>
-				</section>
-
-				<section class="section" aria-label="Features">
-					<h2>Features</h2>
-					<div class="featureGrid">
-						<div class="feature">
-							<h3>Interior upgrades</h3>
-							<ul>
-								<li>Two primary suites with large bedrooms</li>
-								<li>Ceiling fans throughout</li>
-								<li>New LVP flooring</li>
-								<li>New appliances</li>
-								<li>New butcher block countertops</li>
-								<li>Newly renovated bathrooms</li>
-							</ul>
-						</div>
-						<div class="feature">
-							<h3>Windows and access</h3>
-							<ul>
-								<li>New dual pane vinyl windows</li>
-								<li>New vinyl patio door</li>
-								<li>Ground level for easy access</li>
-							</ul>
-						</div>
-						<div class="feature">
-							<h3>Outdoor space</h3>
-							<ul>
-								<li>Large wrap around backyard space</li>
-								<li>Room for a garden, pets, and outdoor dining</li>
-								<li>Well planted tranquil courtyard feel</li>
-							</ul>
-						</div>
-						<div class="feature">
-							<h3>Parking and location</h3>
-							<ul>
-								<li>Two reserved parking spots directly in front</li>
-								<li>Close to shopping, dining, and major routes</li>
-								<li>Great schools in the district</li>
-							</ul>
-						</div>
+				</div>
+				<div class="gallery-item fade-in">
+					<img src="/blog-placeholder-4.jpg" alt="Primary Suite 2" width="600" height="600" />
+					<div class="gallery-overlay">
+						<span>Primary Suite 2</span>
 					</div>
-				</section>
+				</div>
+				<div class="gallery-item fade-in">
+					<img src="/blog-placeholder-5.jpg" alt="Bathroom" width="600" height="600" />
+					<div class="gallery-overlay">
+						<span>Bathroom</span>
+					</div>
+				</div>
+				<div class="gallery-item large fade-in">
+					<img src="/blog-placeholder-about.jpg" alt="Wrap-Around Backyard" width="800" height="450" />
+					<div class="gallery-overlay">
+						<span>Wrap-Around Backyard</span>
+					</div>
+				</div>
+				<div class="gallery-item fade-in">
+					<img src="/blog-placeholder-1.jpg" alt="Parking Spots" width="600" height="600" />
+					<div class="gallery-overlay">
+						<span>Parking Spots</span>
+					</div>
+				</div>
+			</div>
+		</section>
 
-				<section class="section" aria-label="Showing and offers">
-					<h2>Showings and offers</h2>
+		<!-- Highlights Section -->
+		<section class="highlights-section" aria-label="Key highlights">
+			<h2 class="section-title">Key Highlights</h2>
+			<p class="section-subtitle">The rare combination of luxury and convenience</p>
+
+			<div class="highlights-grid">
+				<div class="highlight-card fade-in">
+					<div class="highlight-icon" aria-hidden="true">🛏️</div>
+					<h3>Two Primary Suites</h3>
+					<p>Large bedrooms offering privacy and comfort, perfect for roommates or multi-generational living.</p>
+				</div>
+				<div class="highlight-card fade-in">
+					<div class="highlight-icon" aria-hidden="true">✨</div>
+					<h3>Fully Renovated</h3>
+					<p>New LVP flooring, renovated bathrooms, modern appliances, and butcher block countertops throughout.</p>
+				</div>
+				<div class="highlight-card fade-in">
+					<div class="highlight-icon" aria-hidden="true">🌿</div>
+					<h3>Outdoor Paradise</h3>
+					<p>Large wrap-around backyard perfect for pets, gardening, or outdoor entertaining.</p>
+				</div>
+				<div class="highlight-card fade-in">
+					<div class="highlight-icon" aria-hidden="true">🚗</div>
+					<h3>Premium Parking</h3>
+					<p>Two reserved parking spots directly in front of your ground-level unit for ultimate convenience.</p>
+				</div>
+				<div class="highlight-card fade-in">
+					<div class="highlight-icon" aria-hidden="true">🪟</div>
+					<h3>Energy Efficient</h3>
+					<p>New dual-pane vinyl windows and patio door for comfort and reduced energy costs.</p>
+				</div>
+				<div class="highlight-card fade-in">
+					<div class="highlight-icon" aria-hidden="true">🏡</div>
+					<h3>Tranquil Living</h3>
+					<p>Well-planted courtyard with excellent airflow creates a peaceful, resort-like atmosphere.</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- About Section -->
+		<section class="about-section" aria-label="About this home">
+			<div class="about-content">
+				<h2 class="section-title">About This Home</h2>
+				<p class="about-text">
+					This updated, ground-level condo delivers the rare combination of two true primary suites and a surprisingly large outdoor footprint. Inside, you get new LVP flooring, ceiling fans throughout, new appliances, and renovated bathrooms.
+				</p>
+				<p class="about-text">
+					Outside, the wrap-around backyard space opens up real options: a proper garden, room for pets, or an extended patio setup. The courtyard is lush and calm, and your two reserved parking spots sit directly in front of the building for easy daily life.
+				</p>
+			</div>
+		</section>
+
+		<!-- Details Section -->
+		<section class="details-section" aria-label="Property details">
+			<h2 class="section-title">Property Details</h2>
+
+			<div class="details-grid">
+				<div class="detail-item fade-in">
+					<span class="detail-number">2</span>
+					<span class="detail-label">Bedrooms</span>
+				</div>
+				<div class="detail-item fade-in">
+					<span class="detail-number">2</span>
+					<span class="detail-label">Bathrooms</span>
+				</div>
+				<div class="detail-item fade-in">
+					<span class="detail-number">949</span>
+					<span class="detail-label">Square Feet</span>
+				</div>
+				<div class="detail-item fade-in">
+					<span class="detail-number">$410</span>
+					<span class="detail-label">HOA / Month</span>
+				</div>
+			</div>
+		</section>
+
+		<!-- Features Section -->
+		<section class="features-section" aria-label="Premium features">
+			<h2 class="section-title">Premium Features</h2>
+
+			<div class="features-container">
+				<div class="feature-category fade-in">
+					<h3>Interior Upgrades</h3>
 					<ul>
-						<li>Showings by appointment only</li>
-						<li>Proof of funds, lender pre approval requested for showings</li>
+						<li>Two primary suites with large bedrooms</li>
+						<li>Ceiling fans throughout</li>
+						<li>New LVP flooring</li>
+						<li>New appliances</li>
+						<li>New butcher block countertops</li>
+						<li>Newly renovated bathrooms</li>
 					</ul>
-				</section>
+				</div>
+				<div class="feature-category fade-in">
+					<h3>Windows &amp; Access</h3>
+					<ul>
+						<li>New dual pane vinyl windows</li>
+						<li>New vinyl patio door</li>
+						<li>Ground level for easy access</li>
+					</ul>
+				</div>
+				<div class="feature-category fade-in">
+					<h3>Outdoor Space</h3>
+					<ul>
+						<li>Large wrap-around backyard space</li>
+						<li>Room for a garden, pets, and outdoor dining</li>
+						<li>Well planted tranquil courtyard feel</li>
+					</ul>
+				</div>
+				<div class="feature-category fade-in">
+					<h3>Parking &amp; Location</h3>
+					<ul>
+						<li>Two reserved parking spots directly in front</li>
+						<li>Close to shopping, dining, and major routes</li>
+						<li>Great schools in the district</li>
+					</ul>
+				</div>
+			</div>
+		</section>
 
-				<section class="section contactBottom" aria-label="Contact information at bottom">
-					<h2>Contact</h2>
-					<p class="muted">Reach out for a showing, disclosures, or any questions.</p>
-					<div class="contactRow">
-						<div><strong>Name:</strong>David Chon</div>
-						<div><strong>Texts:</strong>‪858&hyphen;215&hyphen;4192‬</div>
-						<div><strong>Email:</strong> <a href="mailto:david.chon@yourpropertysd.com">david.chon@yourpropertysd.com</a></div>
-					</div>
-				</section>
+		<!-- Contact Section -->
+		<section class="contact-section" id="contact" aria-label="Schedule a showing">
+			<h2 class="section-title">Schedule a Showing</h2>
+			<p class="section-subtitle">Reach out for a showing, disclosures, or any questions</p>
 
-			</article>
-		</main>
+			<div class="contact-info">
+				<div class="contact-item fade-in">
+					<div class="contact-label">Contact Name</div>
+					<div class="contact-value">David Chon</div>
+				</div>
+				<div class="contact-item fade-in">
+					<div class="contact-label">Text Messages</div>
+					<div class="contact-value"><a href="sms:858-215-4192">858-215-4192</a></div>
+				</div>
+				<div class="contact-item fade-in">
+					<div class="contact-label">Email</div>
+					<div class="contact-value"><a href="mailto:david.chon@yourpropertysd.com">david.chon@yourpropertysd.com</a></div>
+				</div>
+				<div class="showing-note">
+					<strong>Showings by appointment only</strong><br />
+					Proof of funds or lender pre-approval requested for showings
+				</div>
+			</div>
+		</section>
+
 		<Footer />
-		<style>
-			:global(body) {
-				color: #0f172a;
-				background: #ffffff;
+
+		<style is:global>
+			:root {
+				--cream: #F8F6F1;
+				--charcoal: #2A2A2A;
+				--sage: #8B9F8E;
+				--terracotta: #C97356;
+				--gold: #C9A86A;
+				--light-sage: #E8EDE9;
 			}
 
-			.listing {
-				max-width: 980px;
-				margin: 0 auto;
-				padding: 2.5rem 1.25rem 4rem;
+			body {
+				font-family: 'Darker Grotesque', sans-serif;
+				background: var(--cream);
+				color: var(--charcoal);
+				line-height: 1.6;
+				overflow-x: hidden;
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
 			}
 
+			*,
+			*::before,
+			*::after {
+				box-sizing: border-box;
+			}
+
+			/* Hero Section */
 			.hero {
-				padding: 1.75rem;
-				border: 1px solid rgba(15, 23, 42, 0.12);
-				border-radius: 18px;
-				background: rgba(15, 23, 42, 0.03);
-			}
-
-			.badge {
-				display: inline-block;
-				font-size: 0.9rem;
-				font-weight: 700;
-				letter-spacing: 0.02em;
-				padding: 0.35rem 0.65rem;
-				border-radius: 999px;
-				border: 1px solid rgba(15, 23, 42, 0.18);
-				background: #ffffff;
-				margin: 0 0 0.75rem;
-			}
-
-			.title {
-				font-size: clamp(1.8rem, 3vw, 2.6rem);
-				margin: 0;
-			}
-
-			.subtitle {
-				font-size: 1.1rem;
-				margin: 0.35rem 0 0;
-				color: rgba(15, 23, 42, 0.75);
-			}
-
-			.price {
-				margin: 0.8rem 0 0;
-				font-size: 1.05rem;
-			}
-
-			.section {
-				margin-top: 2.25rem;
-			}
-
-			.section h2 {
-				font-size: 1.35rem;
-				margin: 0 0 0.85rem;
-			}
-
-			.section h3 {
-				font-size: 1.05rem;
-				margin: 0 0 0.6rem;
-			}
-
-			.muted {
-				color: rgba(15, 23, 42, 0.7);
-			}
-
-			.small {
-				font-size: 0.95rem;
-			}
-
-			.highlights {
-				display: grid;
-				gap: 0.6rem 1.1rem;
-				grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-				padding-left: 1.2rem;
-				margin: 0;
-			}
-
-			.detailsGrid {
-				display: grid;
-				grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-				gap: 0.75rem;
-			}
-
-			.detail {
-				border: 1px solid rgba(15, 23, 42, 0.12);
-				border-radius: 14px;
-				padding: 0.85rem 0.95rem;
-				background: #ffffff;
+				height: 100vh;
+				position: relative;
 				display: flex;
-				justify-content: space-between;
-				gap: 0.75rem;
+				align-items: center;
+				justify-content: center;
+				overflow: hidden;
+				background: linear-gradient(135deg, rgba(232, 237, 233, 0.95) 0%, rgba(248, 246, 241, 0.95) 100%),
+					url('/blog-placeholder-1.jpg');
+				background-size: cover;
+				background-position: center;
 			}
 
-			.detail .k {
-				color: rgba(15, 23, 42, 0.7);
+			.hero::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background: linear-gradient(135deg, rgba(42, 42, 42, 0.6) 0%, rgba(42, 42, 42, 0.3) 100%);
+				z-index: 1;
 			}
 
-			.detail .v {
-				font-weight: 700;
-			}
-
-			.featureGrid {
-				display: grid;
-				grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-				gap: 1rem;
-			}
-
-			.feature {
-				border: 1px solid rgba(15, 23, 42, 0.12);
-				border-radius: 18px;
-				padding: 1rem 1rem 0.85rem;
-				background: #ffffff;
-			}
-
-			.feature ul {
-				margin: 0;
-				padding-left: 1.2rem;
-			}
-
-			.gallery {
-				display: grid;
-				grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-				gap: 0.85rem;
-				margin-top: 0.9rem;
-			}
-
-			.photoPlaceholder {
-				border: 2px dashed rgba(15, 23, 42, 0.25);
-				border-radius: 18px;
-				min-height: 170px;
-				display: grid;
-				place-items: center;
-				padding: 1rem;
+			.hero-content {
 				text-align: center;
-				color: rgba(15, 23, 42, 0.65);
-				background: rgba(15, 23, 42, 0.02);
+				z-index: 2;
+				animation: fadeInUp 1.2s ease-out;
 			}
 
-			.contactCard {
-				margin-top: 1.1rem;
-				border: 1px solid rgba(15, 23, 42, 0.12);
-				border-radius: 18px;
-				padding: 1rem 1.05rem;
-				background: #ffffff;
-				max-width: 520px;
+			.hero-label {
+				font-size: 0.9rem;
+				letter-spacing: 3px;
+				text-transform: uppercase;
+				color: var(--sage);
+				margin-bottom: 1rem;
+				font-weight: 500;
 			}
 
-			.contactTitle {
-				margin: 0 0 0.6rem;
-				font-size: 1.15rem;
+			.hero h1 {
+				font-family: 'Cormorant Garamond', serif;
+				font-size: clamp(3rem, 8vw, 7rem);
+				font-weight: 300;
+				line-height: 1.1;
+				margin-bottom: 1rem;
+				color: var(--charcoal);
 			}
 
-			.contactList {
-				margin: 0;
-				padding-left: 1.1rem;
+			.hero-address {
+				font-size: clamp(1.2rem, 3vw, 2rem);
+				color: var(--sage);
+				margin-bottom: 2rem;
+				font-weight: 300;
 			}
 
-			.contactNote {
-				margin: 0.75rem 0 0;
-				color: rgba(15, 23, 42, 0.7);
-				font-size: 0.95rem;
+			.hero-price {
+				font-family: 'Cormorant Garamond', serif;
+				font-size: clamp(2rem, 5vw, 4rem);
+				color: var(--terracotta);
+				font-weight: 400;
+				margin-bottom: 3rem;
 			}
 
-			.contactBottom {
-				border-top: 1px solid rgba(15, 23, 42, 0.12);
-				padding-top: 1.5rem;
+			.cta-button {
+				display: inline-block;
+				padding: 1.2rem 3rem;
+				background: var(--charcoal);
+				color: var(--cream);
+				text-decoration: none;
+				font-size: 1rem;
+				letter-spacing: 2px;
+				text-transform: uppercase;
+				transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+				position: relative;
+				overflow: hidden;
+				font-weight: 500;
 			}
 
-			.contactRow {
+			.cta-button::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: -100%;
+				width: 100%;
+				height: 100%;
+				background: var(--terracotta);
+				transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+				z-index: -1;
+			}
+
+			.cta-button:hover::before {
+				left: 0;
+			}
+
+			.scroll-indicator {
+				position: absolute;
+				bottom: 3rem;
+				left: 50%;
+				transform: translateX(-50%);
+				animation: bounce 2s infinite;
+			}
+
+			.scroll-indicator::after {
+				content: '↓';
+				font-size: 2rem;
+				color: var(--sage);
+			}
+
+			/* Section titles */
+			.section-title {
+				font-family: 'Cormorant Garamond', serif;
+				font-size: clamp(2.5rem, 6vw, 5rem);
+				font-weight: 300;
+				text-align: center;
+				margin-bottom: 1rem;
+				color: var(--charcoal);
+			}
+
+			.section-subtitle {
+				text-align: center;
+				color: var(--sage);
+				font-size: 1.2rem;
+				margin-bottom: 5rem;
+				font-weight: 300;
+			}
+
+			/* Gallery Section */
+			.gallery-section {
+				padding: 8rem 5%;
+				background: white;
+			}
+
+			.gallery-section .section-subtitle {
+				margin-bottom: 3rem;
+			}
+
+			.gallery-grid {
 				display: grid;
-				grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-				gap: 0.75rem;
-				margin-top: 0.75rem;
+				grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+				gap: 1.5rem;
+				max-width: 1400px;
+				margin: 0 auto;
+			}
+
+			.gallery-item {
+				position: relative;
+				overflow: hidden;
+				aspect-ratio: 1;
+				cursor: pointer;
+				transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+			}
+
+			.gallery-item.large {
+				grid-column: span 2;
+				aspect-ratio: 16/9;
+			}
+
+			.gallery-item img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+			}
+
+			.gallery-item:hover img {
+				transform: scale(1.1);
+			}
+
+			.gallery-overlay {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				padding: 2rem;
+				background: linear-gradient(to top, rgba(42, 42, 42, 0.9), transparent);
+				color: white;
+				transform: translateY(100%);
+				transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+			}
+
+			.gallery-item:hover .gallery-overlay {
+				transform: translateY(0);
+			}
+
+			.gallery-overlay span {
+				font-family: 'Cormorant Garamond', serif;
+				font-size: 1.5rem;
+				font-weight: 500;
+			}
+
+			@media (max-width: 768px) {
+				.gallery-item.large {
+					grid-column: span 1;
+					aspect-ratio: 1;
+				}
+			}
+
+			/* Highlights Section */
+			.highlights-section {
+				padding: 8rem 5%;
+				background: var(--cream);
+				position: relative;
+			}
+
+			.highlights-section .section-subtitle {
+				margin-bottom: 5rem;
+			}
+
+			.highlights-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+				gap: 3rem;
+				max-width: 1400px;
+				margin: 0 auto;
+			}
+
+			.highlight-card {
+				padding: 2.5rem;
+				background: white;
+				border: 1px solid rgba(139, 159, 142, 0.2);
+				transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+				position: relative;
+				overflow: hidden;
+			}
+
+			.highlight-card::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: -100%;
+				width: 100%;
+				height: 3px;
+				background: var(--terracotta);
+				transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+			}
+
+			.highlight-card:hover::before {
+				left: 0;
+			}
+
+			.highlight-card:hover {
+				transform: translateY(-10px);
+				box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+			}
+
+			.highlight-icon {
+				width: 50px;
+				height: 50px;
+				background: var(--light-sage);
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin-bottom: 1.5rem;
+				font-size: 1.5rem;
+			}
+
+			.highlight-card h3 {
+				font-family: 'Cormorant Garamond', serif;
+				font-size: 1.8rem;
+				margin-bottom: 1rem;
+				font-weight: 500;
+			}
+
+			.highlight-card p {
+				color: #666;
+				line-height: 1.8;
+				font-size: 1.1rem;
+				margin: 0;
+			}
+
+			/* About Section */
+			.about-section {
+				padding: 8rem 5%;
+				background: var(--charcoal);
+				color: var(--cream);
+			}
+
+			.about-content {
+				max-width: 900px;
+				margin: 0 auto;
+			}
+
+			.about-section .section-title {
+				color: var(--cream);
+				text-align: left;
+				margin-bottom: 2rem;
+			}
+
+			.about-text {
+				font-size: 1.3rem;
+				line-height: 2;
+				margin-bottom: 2rem;
+				font-weight: 300;
+				opacity: 0.9;
+			}
+
+			.about-text:last-child {
+				margin-bottom: 0;
+			}
+
+			/* Details Section */
+			.details-section {
+				padding: 8rem 5%;
+				background: var(--light-sage);
+			}
+
+			.details-section .section-title {
+				margin-bottom: 0;
+			}
+
+			.details-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+				gap: 4rem;
+				max-width: 1400px;
+				margin: 4rem auto;
+			}
+
+			.detail-item {
+				text-align: center;
+			}
+
+			.detail-number {
+				font-family: 'Cormorant Garamond', serif;
+				font-size: 4rem;
+				color: var(--terracotta);
+				font-weight: 400;
+				display: block;
+				margin-bottom: 0.5rem;
+			}
+
+			.detail-label {
+				font-size: 1.1rem;
+				color: var(--charcoal);
+				text-transform: uppercase;
+				letter-spacing: 2px;
+				font-weight: 500;
+			}
+
+			/* Features Section */
+			.features-section {
+				padding: 8rem 5%;
+				background: white;
+			}
+
+			.features-section .section-title {
+				margin-bottom: 0;
+			}
+
+			.features-container {
+				max-width: 1400px;
+				margin: 4rem auto 0;
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+				gap: 5rem;
+			}
+
+			.feature-category h3 {
+				font-family: 'Cormorant Garamond', serif;
+				font-size: 2.2rem;
+				margin-bottom: 2rem;
+				color: var(--charcoal);
+				font-weight: 500;
+				border-bottom: 2px solid var(--terracotta);
+				padding-bottom: 1rem;
+			}
+
+			.feature-category ul {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+			}
+
+			.feature-category li {
+				padding: 1rem 0;
+				padding-left: 2rem;
+				position: relative;
+				font-size: 1.1rem;
+				color: #555;
+				transition: all 0.3s ease;
+			}
+
+			.feature-category li::before {
+				content: '✓';
+				position: absolute;
+				left: 0;
+				color: var(--sage);
+				font-weight: bold;
+			}
+
+			.feature-category li:hover {
+				color: var(--charcoal);
+				padding-left: 2.5rem;
+			}
+
+			/* Contact Section */
+			.contact-section {
+				padding: 8rem 5%;
+				background: var(--charcoal);
+				color: var(--cream);
+				text-align: center;
+			}
+
+			.contact-section .section-title {
+				color: var(--cream);
+			}
+
+			.contact-section .section-subtitle {
+				color: rgba(248, 246, 241, 0.9);
+				margin-bottom: 0;
+			}
+
+			.contact-info {
+				max-width: 600px;
+				margin: 4rem auto;
+			}
+
+			.contact-item {
+				margin: 2rem 0;
+				padding: 2rem;
+				background: rgba(255, 255, 255, 0.05);
+				border: 1px solid rgba(255, 255, 255, 0.1);
+				transition: all 0.3s ease;
+			}
+
+			.contact-item:hover {
+				background: rgba(255, 255, 255, 0.08);
+				transform: scale(1.02);
+			}
+
+			.contact-label {
+				font-size: 0.9rem;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+				color: var(--sage);
+				margin-bottom: 0.5rem;
+			}
+
+			.contact-value {
+				font-family: 'Cormorant Garamond', serif;
+				font-size: 1.8rem;
+				color: var(--cream);
+			}
+
+			.contact-value a {
+				color: var(--cream);
+				text-decoration: none;
+				transition: color 0.3s ease;
+			}
+
+			.contact-value a:hover {
+				color: var(--terracotta);
+			}
+
+			.showing-note {
+				margin-top: 3rem;
+				padding: 2rem;
+				background: var(--terracotta);
+				color: white;
+				border-radius: 0;
+				font-size: 1.1rem;
+			}
+
+			/* Animations */
+			@keyframes fadeInUp {
+				from {
+					opacity: 0;
+					transform: translateY(40px);
+				}
+				to {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
+
+			@keyframes bounce {
+				0%,
+				100% {
+					transform: translateX(-50%) translateY(0);
+				}
+				50% {
+					transform: translateX(-50%) translateY(-10px);
+				}
+			}
+
+			/* Scroll animations */
+			.fade-in {
+				opacity: 0;
+				transform: translateY(30px);
+				transition: opacity 0.8s ease, transform 0.8s ease;
+			}
+
+			.fade-in.visible {
+				opacity: 1;
+				transform: translateY(0);
+			}
+
+			/* Responsive */
+			@media (max-width: 768px) {
+				.highlights-section,
+				.about-section,
+				.details-section,
+				.features-section,
+				.contact-section,
+				.gallery-section {
+					padding: 4rem 5%;
+				}
+
+				.features-container {
+					grid-template-columns: 1fr;
+					gap: 3rem;
+				}
+
+				.details-grid {
+					gap: 2rem;
+				}
 			}
 
 			@media (prefers-reduced-motion: reduce) {
-				* {
-					scroll-behavior: auto;
+				.cta-button::before,
+				.highlight-card::before,
+				.gallery-item,
+				.gallery-item img,
+				.gallery-overlay,
+				.contact-item,
+				.fade-in {
+					transition: none;
+				}
+				.hero-content {
+					animation: none;
+				}
+				.scroll-indicator {
+					animation: none;
 				}
 			}
 		</style>
+
+		<script>
+			// Smooth scrolling
+			document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+				anchor.addEventListener('click', function (e) {
+					e.preventDefault();
+					const href = anchor.getAttribute('href');
+					if (href) {
+						const target = document.querySelector(href);
+						if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+					}
+				});
+			});
+
+			// Scroll animations
+			const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+			const observer = new IntersectionObserver((entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) entry.target.classList.add('visible');
+				});
+			}, observerOptions);
+			document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+		</script>
 	</body>
+</html>

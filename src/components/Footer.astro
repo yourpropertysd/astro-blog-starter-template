@@ -2,27 +2,19 @@
 const today = new Date();
 ---
 
-<footer>
-	&copy; {today.getFullYear()} Your Property San Diego. All rights reserved.
+<footer class="site-footer">
+	<p>&copy; {today.getFullYear()} Your Property San Diego. All rights reserved.</p>
 </footer>
 <style>
-	footer {
-		padding: 2em 1em 6em 1em;
-		background: linear-gradient(var(--gray-gradient)) no-repeat;
-		color: rgb(var(--gray));
+	.site-footer {
+		padding: 3rem 5%;
+		background: #1A1A1A;
+		color: rgba(255, 255, 255, 0.5);
 		text-align: center;
+		font-size: 0.9rem;
+		margin: 0;
 	}
-	.social-links {
-		display: flex;
-		justify-content: center;
-		gap: 1em;
-		margin-top: 1em;
-	}
-	.social-links a {
-		text-decoration: none;
-		color: rgb(var(--gray));
-	}
-	.social-links a:hover {
-		color: rgb(var(--gray-dark));
+	.site-footer p {
+		margin: 0;
 	}
 </style>
